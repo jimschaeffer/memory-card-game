@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Gameboard from "./components/Gameboard";
+import Scoreboard from "./components/ScoreBoard";
 
-function App() {
+const App = () => {
+  const [currentScore, setCurrentScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
+  useEffect(() => {
+    if (currentScore > highScore) {
+      setHighScore(currentScore);
+    }
+  }, [currentScore, highScore]);
+
+  const handleScore = (isCorrect) => {
+    if (isCorrect) {
+      setCurrentScore(currentScore + 1);
+    } else {
+      setCurrentScore(0);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Scoreboard currentScore={currentScore} highScore={highScore} />
+      <Gameboard handleScore={handleScore} />
     </div>
   );
-}
+};
 
 export default App;
