@@ -6,42 +6,42 @@ const Gameboard = ({ handleScore }) => {
     {
       id: 1,
       text: "Mario",
-      img: "imgs/mario.jpg",
+      img: "http://marioimages.netlify.app/mario.jpg",
     },
     {
       id: 2,
       text: "Luigi",
-      img: "imgs/luigi.jpg",
+      img: "http://marioimages.netlify.app/luigi.jpg",
     },
     {
       id: 3,
       text: "Toad",
-      img: "imgs/toad.jpg",
+      img: "http://marioimages.netlify.app/toad.jpg",
     },
     {
       id: 4,
       text: "Peach",
-      img: "imgs/peach.jpg",
+      img: "http://marioimages.netlify.app/peach.jpg",
     },
     {
       id: 5,
       text: "Bowser",
-      img: "imgs/bowser.jpg",
+      img: "http://marioimages.netlify.app/bowser.jpg",
     },
     {
       id: 6,
       text: "Wario",
-      img: "imgs/wario.jpg",
+      img: "http://marioimages.netlify.app/wario.jpg",
     },
     {
       id: 7,
       text: "Donkey Kong",
-      img: "imgs/dk.jpg",
+      img: "http://marioimages.netlify.app/dk.jpg",
     },
     {
       id: 8,
       text: "Yoshi",
-      img: "imgs/yoshi.jpg",
+      img: "http://marioimages.netlify.app/yoshi.jpg",
     },
   ]);
 
